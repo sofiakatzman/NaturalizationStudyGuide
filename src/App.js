@@ -1,10 +1,11 @@
-import { useState } from 'react';
-import './App.css';
+import { useState } from 'react'
+import './App.css'
+import questionsData from "./data/DATA"
 
 /* -------------------------------------------------------------------
 
   This is my Naturalization Study Guide!
-    * Data Points To Calculate For:
+    ✓ Data Points To Calculate For:
       There are a total of X questions. 
       I have answered X questions. 
       I have gotten X questions correct. 
@@ -28,8 +29,9 @@ function App() {
   const [correct, setCorrect] = useState([])
   const [wrong, setWrong] = useState([])
   const [index, setIndex] = useState(getRandomInt())
+  const [mode, setMode] = useState("study")
 
-
+  // console.log(questionsData)
   function getRandomInt() {
     let min = Math.ceil(0);
     let max = Math.floor(99);
@@ -62,25 +64,67 @@ function App() {
     setAnswered([...answered, index])
   }
   
-  if(answered.length < 99)return (
-    <div className="App">
-      <h1>{index}</h1>
+  function switchMode(){
+    mode === "study" ? setMode("quiz") : setMode("study")
+  }
 
-      <button onClick={()=> markCorrect()}>Mark Correct</button>
-      <button onClick={()=> markWrong()}>Mark Wrong</button>
-      <h1>Total Questions: {answered.length}</h1>
-      <h1>Correctly Answered: {correct.length}</h1>
-      <h1>Incorrectly Answered: {wrong.length}</h1>
-      <h1>Questions Left: {99 - answered.length}</h1>
+  // listen for quiz mode to interject once enough questions are answered
+  console.log(correct.length)
+  console.log(mode)
 
-    </div>
-  );
-
-  if(answered.length == 99)return(
+  if(answered.length == questionsData.length)return(
     <div>
       <h1>You've answered all the questions!</h1>
     </div>
   )
+
+  if(mode == "quiz" && correct.length == 6)return(
+    <div>
+      <h1>Well done! You've passed.</h1>
+    </div>
+  )
+
+  if(mode == "quiz" && answered.length == 10)return(
+    <div>
+      <h1>Oh no! You failed</h1>
+    </div>
+  )
+  
+  if(answered.length < questionsData.length)return(
+    <div className="App">
+      {/* score */}
+      <div className="score">
+        <h3>Total Questions: {answered.length}</h3>
+        <h3>Correctly Answered: {correct.length}</h3>
+        <h3>Incorrectly Answered: {wrong.length}</h3>
+        <h3>Questions Left: {questionsData.length - answered.length}</h3>
+
+        {/* mode  */}
+        <div className="mode">
+          <h4>Mode: {mode}</h4>
+          <button onClick={switchMode}>switch</button>
+        </div>
+
+      </div>
+
+      {/* question card */}
+      <div className="question-card">
+        <p>{questionsData[index].question}</p>
+      </div>
+
+      {/* answer card  */}
+      <div className="answer-card">
+        <ul>
+          {questionsData[index].answer.map((answer, idx) => (
+            <li key={idx}>{answer}</li>
+          ))}
+        </ul>
+        <button onClick={()=> markCorrect()}>Mark Correct</button>
+        <button onClick={()=> markWrong()}>Mark Wrong</button>
+      </div>
+    </div>
+  )
+
 }
 
 export default App;
