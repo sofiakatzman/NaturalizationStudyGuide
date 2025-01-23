@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import questionsData from "./data/DATA"
+import Card from './Card'
 
 /* -------------------------------------------------------------------
 
@@ -105,23 +106,14 @@ function App() {
           <button onClick={switchMode}>switch</button>
         </div>
 
-      </div>
+        <Card data={questionsData[index]}
+              markCorrect={markCorrect}
+              markWrong={markWrong}
+        />
 
-      {/* question card */}
-      <div className="question-card">
-        <p>{questionsData[index].question}</p>
       </div>
+        
 
-      {/* answer card  */}
-      <div className="answer-card">
-        <ul>
-          {questionsData[index].answer.map((answer, idx) => (
-            <li key={idx}>{answer}</li>
-          ))}
-        </ul>
-        <button onClick={()=> markCorrect()}>Mark Correct</button>
-        <button onClick={()=> markWrong()}>Mark Wrong</button>
-      </div>
     </div>
   )
 
