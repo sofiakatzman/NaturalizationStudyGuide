@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/NaturalizationStudyGuide/static/css/main.fcf8652b.css",
+    "main.js": "/NaturalizationStudyGuide/static/js/main.9bb8f11a.js",
+    "index.html": "/NaturalizationStudyGuide/index.html",
+    "main.fcf8652b.css.map": "/NaturalizationStudyGuide/static/css/main.fcf8652b.css.map",
+    "main.9bb8f11a.js.map": "/NaturalizationStudyGuide/static/js/main.9bb8f11a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fcf8652b.css",
+    "static/js/main.9bb8f11a.js"
+  ]
+}
