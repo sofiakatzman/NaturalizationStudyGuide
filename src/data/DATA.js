@@ -1,7 +1,7 @@
-export default naturalizationTest = [
+const questionsData = [
     {
       question: "What is the supreme law of the land?",
-      answer: "The Constitution"
+      answer: ["The Constitution"]
     },
     {
       question: "What does the Constitution do?",
@@ -13,15 +13,15 @@ export default naturalizationTest = [
     },
     {
       question: "The idea of self-government is in the first three words of the Constitution. What are these words?",
-      answer: "We the People"
+      answer: ["We the People"]
     },
     {
         question: "What is an amendment?",
-        answer: "A change or addition to the Constitution"
+        answer: ["A change or addition to the Constitution"]
     },
     {
         question: "What do we call the first ten amendments to the Constitution?",
-        answer: "The Bill of Rights"
+        answer: ["The Bill of Rights"]
     },
     {
         question: "What is one right or freedom from the First Amendment?",
@@ -35,7 +35,7 @@ export default naturalizationTest = [
     },
     {
         question: "How many amendments does the Constitution have?",
-        answer: "27"
+        answer: ["27"]
     },
     {
         question: "What did the Declaration of Independence do?",
@@ -55,7 +55,7 @@ export default naturalizationTest = [
     },
     {
         question: "What is freedom of religion?",
-        answer: "You can practice any religion, or not practice a religion"
+        answer: ["You can practice any religion, or not practice a religion"]
     },
     {
         question: "What is the economic system in the United States?",
@@ -77,7 +77,7 @@ export default naturalizationTest = [
     },
     {
         question: "Who is in charge of the executive branch?",
-        answer: "the President"
+        answer: ["the President"]
     },
     {
         question: "Who makes federal laws?",
@@ -85,79 +85,79 @@ export default naturalizationTest = [
     },
     {
         question: "What are the two parts of the U.S. Congress?",
-        answer: "the Senate and House (of Representatives)"
+        answer: ["the Senate and House (of Representatives)"]
     },
     {
         question: "How many U.S. Senators are there?",
-        answer: "one hundred (100)"
+        answer: ["one hundred (100)"]
     },
     {
         question: "We elect a U.S. Senator for how many years?",
-        answer: "six (6)"
+        answer: ["six (6)"]
     },
     {
         question: "Who is one of your state's U.S. Senators now?",
-        answer: "Cory Booker and Andy Kim"
+        answer: ["Cory Booker and Andy Kim"]
     },
     {
         question: "The House of Representatives has how many voting members?",
-        answer: " four hundred thirty-five (435)"
+        answer: ["four hundred thirty-five (435)"]
     },
     {
         question: "We elect a U.S. Representative for how many years?",
-        answer: "two (2)"
+        answer: ["two (2)"]
     },
     {
         question: "Name your U.S. Representative",
-        answer: "Robert Menendez"
+        answer: ["Robert Menendez"]
     },
     {
         question: "Who does a U.S. Senator represent?",
-        answer: "all people of the state"
+        answer: ["all people of the state"]
     },
     {
         question: "Why do some states have more Representatives than other states?",
-        answer: "(because of) the state's population"
+        answer: ["(because of) the state's population"]
     },
     {
         question: "We elect a President for how many years?",
-        answer: "four (4)"
+        answer: ["four (4)"]
     },
     {
         question: "In what month do we vote for President?",
-        answer: "November"
+        answer: ["November"]
     },
     {
         question: "What is the name of the President of the United States now?",
-        answer: "President Donald J. Trump"
+        answer: ["President Donald J. Trump"]
     },
     {
         question: "What is the name of the Vice President of the United States now?",
-        answer: "J.D. Vance"
+        answer: ["J.D. Vance"]
     },
     {
         question: "If the President can no longer serve, who becomes President?",
-        answer: "the Vice President"
+        answer: ["the Vice President"]
     },
     {
         question: "If both the President and the Vice President can no longer serve, who becomes President?",
-        answer: "the Speaker of the House"
+        answer: ["the Speaker of the House"]
     },
     {
         question: "Who is the Commander in Chief of the military?",
-        answer: "the President"
+        answer: ["the President"]
     },
     {
         question: "Who signs bills to become laws?",
-        answer: "the President"
+        answer: ["the President"]
     },
     {
         question: "Who vetoes bills?",
-        answer: "the President"
+        answer: ["the President"]
     },
     {
         question: "What does the President's Cabinet do?",
-        answer: "advises the President"
+        answer: ["advises the President"]
     },
     {
         question: "What are two Cabinet-level positions?",
@@ -188,15 +188,15 @@ export default naturalizationTest = [
     },
     {
         question: "What is the highest court in the United States?",
-        answer: "the Supreme Court"
+        answer: ["the Supreme Court"]
     },
     {
         question: "How many justices are on the Supreme Court?",
-        answer: "Nine (9)"
+        answer: ["Nine (9)"]
     },
     {
         question: "Who is the Chief Justice of the United States now?",
-        answer: "John Roberts"
+        answer: ["John Roberts"]
     },
     {
         question: "Under our Constitution, some powers belong to the federal government. What is one power of the federal government?",
@@ -217,23 +217,23 @@ export default naturalizationTest = [
     },
     {
         question: "Who is the Governor of your state now?",
-        answer: "Philip D. Murphy"
+        answer: ["Philip D. Murphy"]
     },
     {
         question: "What is the capital of your state?",
-        answer: "Trenton"
+        answer: ["Trenton"]
     },
     {
         question: "What are the two major political parties in the United States?*",
-        answer: "Democratic and Republican"
+        answer: ["Democratic and Republican"]
     },
     {
         question: "What is the political party of the President now?",
-        answer: "Republican"
+        answer: ["Republican"]
     },
     {
         question: "What is the name of the Speaker of the House of Representatives now?",
-        answer: "Mike Johnson"
+        answer: ["Mike Johnson"]
     },
     {
         question: "There are four amendments to the Constitution about who can vote. Describe one of them",
@@ -278,7 +278,7 @@ export default naturalizationTest = [
     },
     {
         question: "How old do citizens have to be to vote for President?",
-        answer: "eighteen (18) and older"
+        answer: ["eighteen (18) and older"]
     },
     {
         question: "What are two ways that Americans can participate in their democracy?",
@@ -297,7 +297,7 @@ export default naturalizationTest = [
     },
     {
         question: "When is the last day you can send in federal income tax forms?",
-        answer: "April 15"
+        answer: ["April 15"]
     },
     {
         question: "When must all men register for the Selective Service?",
@@ -315,11 +315,11 @@ export default naturalizationTest = [
     },
     {
         question: "Who lived in America before the Europeans arrived?",
-        answer: "American Indians / Native Americans"
+        answer: ["American Indians / Native Americans"]
     },
     {
         question: "What group of people was taken to America and sold as slaves?",
-        answer: "Africans / People from Africa"
+        answer: ["Africans / People from Africa"]
     },
     {
         question: "Why did the colonists fight the British?",
@@ -331,11 +331,11 @@ export default naturalizationTest = [
     },
     {
         question: "Who wrote the Declaration of Independence?",
-        answer: "Thomas Jefferson"
+        answer: ["Thomas Jefferson"]
     },
     {
         question: "When was the Declaration of Independence adopted?",
-        answer: "July 4, 1776"
+        answer: ["July 4, 1776"]
     },
     {
         question: "There were 13 original states. Name three.",
@@ -357,11 +357,11 @@ export default naturalizationTest = [
     },
     {
         question: "What happened at the Constitutional Convention?",
-        answer: "The Founding Fathers wrote the Constitution."
+        answer: ["The Founding Fathers wrote the Constitution."]
     },
     {
         question: "When was the Constitution written?",
-        answer: "1787"
+        answer: ["1787"]
     },
     {
         question: "The Federalist Papers supported the passage of the U.S. Constitution. Name one of the writers.",
@@ -373,11 +373,11 @@ export default naturalizationTest = [
     },
     {
         question: "Who is the “Father of Our Country”?",
-        answer: "(George) Washington"
+        answer: ["(George) Washington"]
     },
     {
         question: "Who was the first President?",
-        answer: "(George) Washington"
+        answer: ["(George) Washington"]
     },
     {
         question: "What territory did the United States buy from France in 1803?",
@@ -414,27 +414,27 @@ export default naturalizationTest = [
     },
     {
         question: "Who was President during World War I?",
-        answer: "(Woodrow) Wilson"
+        answer: ["(Woodrow) Wilson"]
     },
     {
         question: "Who was President during the Great Depression and World War II?",
-        answer: "(Franklin) Roosevelt"
+        answer: ["(Franklin) Roosevelt"]
     },
     {
         question: "Who did the United States fight in World War II?",
-        answer: "Japan, Germany, and Italy"
+        answer: ["Japan, Germany, and Italy"]
     },
     {
         question: "Before he was President, Eisenhower was a general. What war was he in?",
-        answer: "World War II"
+        answer: ["World War II"]
     },
     {
         question: "During the Cold War, what was the main concern of the United States?",
-        answer: "Communism"
+        answer: ["Communism"]
     },
     {
         question: "What movement tried to end racial discrimination?",
-        answer: "civil rights (movement)"
+        answer: ["civil rights (movement)"]
     },
     {
         question: "What did Martin Luther King, Jr. do?",
@@ -442,7 +442,7 @@ export default naturalizationTest = [
     },
     {
         question: "What major event happened on September 11, 2001, in the United States?",
-        answer: "Terrorists attacked the United States."
+        answer: ["Terrorists attacked the United States."]
     },
     {
         question: "Name one American Indian tribe in the United States.",
@@ -477,11 +477,11 @@ export default naturalizationTest = [
     },
     {
         question: "What ocean is on the West Coast of the United States?",
-        answer: "Pacific (Ocean)"
+        answer: ["Pacific (Ocean)"]
     },
     {
         question: "What ocean is on the East Coast of the United States?",
-        answer: "Atlantic (Ocean)"
+        answer: ["Atlantic (Ocean)"]
     },
     {
         question: "Name one U.S. territory.",
@@ -515,7 +515,7 @@ export default naturalizationTest = [
         ]
     },    {
         question: "What is the capital of the United States?",
-        answer: "Washington, D.C"
+        answer: ["Washington, D.C"]
     },
     {
         question: "Where is the Statue of Liberty?",
@@ -533,11 +533,11 @@ export default naturalizationTest = [
     },
     {
         question: "What is the name of the national anthem?",
-        answer: "The Star-Spangled Banner"
+        answer: ["The Star-Spangled Banner"]
     },
     {
         question: "When do we celebrate Independence Day?",
-        answer: "July 4"
+        answer: ["July 4"]
     },
     {
         question: "Name two national U.S. holidays.",
@@ -556,3 +556,5 @@ export default naturalizationTest = [
         ]
     },
 ]
+
+export default questionsData
