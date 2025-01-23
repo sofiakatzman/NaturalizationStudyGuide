@@ -1,29 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import questionsData from "./data/DATA"
 import Card from './Card'
-
-/* -------------------------------------------------------------------
-
-  This is my Naturalization Study Guide!
-    ✓ Data Points To Calculate For:
-      There are a total of X questions. 
-      I have answered X questions. 
-      I have gotten X questions correct. 
-      I have gotten X questions wrong.
-      There are X questions left. 
-
-    * Study Mode -> Asks all 100 Questions
-          : When App loads, pick a random question to display. 
-            -> User responds to Question: 
-              -> Question marked as correct or incorrect
-              -> Data points updated
-                * load new question 
-                  -> start cycle again
-
-    * Quiz Mode -> Only Asks 10 Questions -> Pass at 6 Correct 
-
-  ------------------------------------------------------------------- */
 
 function App() {
   const [answered, setAnswered] = useState([])
@@ -31,6 +9,14 @@ function App() {
   const [wrong, setWrong] = useState([])
   const [index, setIndex] = useState(getRandomInt())
   const [mode, setMode] = useState("study")
+
+  if(mode == "study"){
+    document.body.style.backgroundColor = '#B2CDC9';
+  }
+
+  if(mode == "quiz"){
+    document.body.style.backgroundColor = '#D0CAF4';
+  }
 
   // console.log(questionsData)
   function getRandomInt() {
@@ -67,6 +53,9 @@ function App() {
   
   function switchMode(){
     mode === "study" ? setMode("quiz") : setMode("study")
+    setAnswered([])
+    setCorrect([])
+    setWrong([])
   }
 
   // listen for quiz mode to interject once enough questions are answered
@@ -95,25 +84,36 @@ function App() {
     <div className="App">
       {/* score */}
       <div className="score">
-        <h3>Total Questions: {answered.length}</h3>
-        <h3>Correctly Answered: {correct.length}</h3>
-        <h3>Incorrectly Answered: {wrong.length}</h3>
-        <h3>Questions Left: {questionsData.length - answered.length}</h3>
-
-        {/* mode  */}
-        <div className="mode">
-          <h4>Mode: {mode}</h4>
-          <button onClick={switchMode}>switch</button>
+        <div>
+          <h3>Answered: </h3>
+          <h3>{answered.length}</h3>
         </div>
+        <div>
+          <h3>Correct:</h3>
+          <h3>{correct.length}</h3>
+        </div>
+
+        <div>
+          <h3>Incorrect:</h3>
+          <h3>{wrong.length}</h3>
+        </div>
+        <div>
+          <h3>Remaining: </h3>
+          <h3>{questionsData.length - answered.length}</h3>
+        </div>
+      </div>
 
         <Card data={questionsData[index]}
               markCorrect={markCorrect}
               markWrong={markWrong}
         />
 
-      </div>
         
-
+        {/* mode  */}
+        <div className="mode">
+            <button onClick={switchMode}>switch to {mode === "study" ? "quiz" : "study"} mode</button>
+            <h4>{mode} mode</h4>
+        </div>
     </div>
   )
 
