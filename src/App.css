@@ -52,7 +52,7 @@
 
 /* Buttons for flipping the card */
 button {
-  background-color: #d6d6d6; 
+  background-color: #ffffff; 
   color: rgb(54, 53, 53);
   border: none;
   border-radius: 5px;
@@ -65,7 +65,7 @@ button {
 
 /* Hover effect for buttons */
 button:hover {
-  background-color: #ffffff; 
+  background-color:  #d6d6d6; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
