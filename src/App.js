@@ -99,7 +99,7 @@ function App() {
         </div>
         <div>
           <h3>Remaining: </h3>
-          <h3>{questionsData.length - answered.length}</h3>
+          <h3>{mode === "quiz" ? 10 : (questionsData.length - answered.length) }</h3>
         </div>
       </div>
 
